@@ -1,0 +1,50 @@
+---
+layout: default
+title: Runcorn Sports
+---
+<!-- Big team photo, will be scolling at some point -->
+<img src="/assets/images/team.jpg" class="img-fluid" alt="team photo">
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ page.title }}</h1>
+        <hr>
+        <div>
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div>
+            <h2>Recent News</h2>
+            <div class="card-group">
+                {% for post in site.posts %}
+                    
+                    <div class="card">
+                            
+                        <img src="{{ post.image }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="{{ post.url }}">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                        </a>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <p class="card-text"><small class="text-muted">{{ post.date | date_to_string }}</small></p>
+                        </div>
+                    
+                    </div>
+                    
+                {% endfor %}
+            </div>
+            <p style="text-align: right;">
+                <a href="/news.html">More news...</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>Sponsors</h3>
+        {% for item in site.data.sponsors %}
+            <a href="{{ item.site }}" target="_blank">
+                <img src="{{ item.logo }}" class="img-fluid" alt="{{ item.name }}">
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+

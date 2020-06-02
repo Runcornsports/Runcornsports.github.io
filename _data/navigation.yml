@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: News
+  link: /news.html
+- name: Contact
+  link: /contact.html
+- name: Teams
+  subfolderitems:
+    - name: Team A
+      page: /teams/TeamA.html
+    - name: Team B
+      page: /teams/TeamB.html
+    - name: Team C
+      page: /teams/TeamC.html
