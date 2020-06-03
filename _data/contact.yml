@@ -1,0 +1,13 @@
+- type: phone
+  value: 0118 999 881 99 9119 725 3
+- type: email
+  value: someone@someplace.com
+- type: twitter
+  value: Link to twitter
+- type: facebook
+  value: Link to facebook
+- type: address
+  value: |
+    P. Sherman
+    42 Wallaby Way
+    Sydney
