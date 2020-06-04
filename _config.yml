@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-paginate
+
+paginate: 2
+paginate_path: "/news/page:num/"

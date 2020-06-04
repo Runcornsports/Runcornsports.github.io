@@ -1,7 +1,7 @@
 - name: Home
   link: /
 - name: News
-  link: /news.html
+  link: /news/
 - name: Contact
   link: /contact.html
 - name: Teams
