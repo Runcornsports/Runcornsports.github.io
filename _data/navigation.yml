@@ -7,8 +7,8 @@
 - name: Teams
   subfolderitems:
     - name: Team A
-      page: /teams/TeamA.html
+      link: /Team.html
     - name: Team B
-      page: /teams/TeamB.html
+      link: /Team.html
     - name: Team C
-      page: /teams/TeamC.html
+      link: /Team.html

@@ -1,0 +1,75 @@
+TeamA:
+  name: Team A
+  roles:
+    management:
+      name: Management
+      color: "#343a40"
+      members:
+      - name: Daniel Bellfield
+        avatar: /assets/images/players/avatars/Danny.jpg
+      - name: Daniel Bellfield
+        avatar: /assets/images/players/avatars/Danny.jpg
+    squad:
+      name: Squad
+      color: "#ad9c66"
+      members:
+      - name: Chris Hough
+        position: Centre back
+        avatar: /assets/images/players/avatars/Chris.jpg
+        description: >
+          Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.
+        previousClubs: 
+          - Runcorn Linnets
+          - Runcorn Town
+          - Winnington Avenue
+          - Helsby
+        stats:
+          played: 6
+          goals: 0
+          assists: 2
+          manOfMatch: 1
+          yellow: 2
+          red: 6
+        sponsor:
+          name: Something
+          image: /assets/images/sponsors/archery.jpg
+      - name: Daniel Bellfield
+        position: Goalkeeper
+        avatar: /assets/images/players/avatars/Danny.jpg
+        description: >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.
+        previousClubs:
+          - Runcorn Albion
+          - Winnington Avenue
+          - Helsby
+        stats:
+          played: 3
+          goals: 0
+          assists: 0
+          manOfMatch: 0
+          yellow: 1
+          red: 1
+
+
+# This will be looped over for building stats tables and 
+# getting the stats of individual players. 
+StatReference:
+  - title: Played
+    reference: played
+  - title: Goals
+    reference: goals
+  - title: Assists
+    reference: assists
+  - title: Man of the Match
+    reference: manOfMatch
+  - title: Yellow Cards
+    reference: yellow
+  - title: Red Cards
+    reference: red

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Runcorn Sports
+title: Runcorn Sports Football Club
 ---
 <!-- Big team photo, will be scolling at some point -->
 <div class="row">
@@ -9,9 +9,16 @@ title: Runcorn Sports
     </div>
 </div>
 <div class="row">
+    <div class="col-md-8 offset-md-4"><h1>{{ page.title }}</h1></div>
+    <div class="col-md-12"><hr></div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <img src="/assets/images/logo_no_text.png" class="img-fluid"/>
+    </div>
     <div class="col-md-8">
-        <h1>{{ page.title }}</h1>
-        <hr>
+        <!--h1>{{ page.title }}</h1>
+        <hr-->
         <div>
             <h2>About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -41,12 +48,15 @@ title: Runcorn Sports
             </p>
         </div>
     </div>
-    <div class="col-md-4">
-        <h3>Sponsors</h3>
+    <div class="col-md-12">
+        <hr>
+        <h3>Our Sponsors:</h3>
+        <!-- TODO: Change column width for screen size (check bootstrap) -->
+        <div class="card-columns" style="column-count: 4;">
         {% for item in site.data.sponsors %}
-            <a href="{{ item.site }}" target="_blank">
-                <img src="{{ item.logo }}" class="img-fluid" alt="{{ item.name }}">
-            </a>
+            <div class="card">
+                <img class="card-img" src="/assets/images/sponsors/{{ item.image }}" class="img-fluid" alt="{{ item.name }}">
+            </div>
         {% endfor %}
     </div>
 </div>

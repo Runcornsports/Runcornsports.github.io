@@ -1,6 +1,32 @@
-- name: The Giggle Shack
-  logo: /assets/images/sponsors/giggle_shack.jpg
-  site: https://www.facebook.com/thegiggleshack/
-- name: Runcorn Cricket Club
-  logo: /assets/images/sponsors/cricket_club.jpg
-  site: http://www.runcorncricketclub.com/
+- name: Dave Massey Garden Maintenance
+  image: daveMassey.jpg
+- name: Dave & Paul, Windows and Conservatories
+  image: DavePaul.jpg
+- name: ABC Taxis
+  image: abc.jpg
+- name: Tocco Beauty Clinic
+  image: tocco.jpg
+- name: Hiz Roomz
+  image: hizRoomz.jpg
+- name: Hiltons of Northwich
+  image: hiltons.jpg
+- name: Molyneux Brickwork LTD
+  image: molyneux.jpg
+- name: FPI Installations
+  image: fpi.jpg
+- name: Total Gardens
+  image: totalGardens.jpg
+- name: Moet Designs
+  image: moet.jpg
+- name: Archery, kitchens and renovations
+  image: archery.jpg
+- name: The Cheshire View
+  image: CheshireView.jpg
+- name: Live your life, drop the knife
+  image: dropTheKnife.jpg
+- name: PS Brickwork and Construction
+  image: PSBrick.jpg
+- name: Halton Plaster and Rendering
+  image: HaltonPlaster.jpg
+- name: Vecchio Sports
+  image: Vecchio.jpg

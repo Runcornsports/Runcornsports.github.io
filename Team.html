@@ -1,0 +1,111 @@
+---
+layout: default
+title: Team A
+team: TeamA
+---
+
+{% assign team = site.data.teams[page.team] %}
+
+<style>
+.avatar {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.player-card {
+    width:70px;
+}
+</style>
+
+{% assign squad = site.data.teams[page.team].roles.squad %}
+
+<!-- Modal for each player -->
+{% for player in squad.members %}
+<div class="modal" id="modal-player{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header" style="background-color: {{ squad.color }}">
+            <h5 class="modal-title" id="exampleModalLongTitle">{{ player.name }} - {{ player.position }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img" src="{{ player.avatar }}">
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="{{ player.sponsor.image }}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <P>{{ player.description }}</P>
+                        <p><b>Previous clubs:</b>
+                        {{ player.previousClubs | join: ", " }}
+                        </p>
+                        <dl class="row">
+                            {% for stat in site.data.teams.StatReference %}
+                                <dt class="col-sm-4">{{ stat.title }}</dt>
+                                <dd class="col-sm-8">{{ player.stats[stat.reference] }}</dd>
+                            {% endfor %}
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer" style="background-color: {{ squad.color }}">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Card for each player -->
+<h2 class="text-center">Squad</h2>
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        {% for player in squad.members %}
+        <div class="col-auto mb-3">            
+            <div class="card" style="width: 110px; background-color: {{ squad.color }};" data-toggle="modal" data-target="#modal-player{{ forloop.index }}">
+                <div class="card-body justify-content-center">
+                    <img class="avatar" src="{{ player.avatar }}">
+                    <span>{{ player.name }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+<h2>Stats</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Player</th>
+            {% for stat in site.data.teams.StatReference %}
+                <th scope="col">{{ stat.title }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for player in site.data.teams[page.team].roles.squad.members %}
+            <tr>
+                <th scope="row">{{ player.name }}</th>
+                {% for stat in site.data.teams.StatReference %}
+                    <td>{{ player.stats[stat.reference] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
