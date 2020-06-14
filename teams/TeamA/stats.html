@@ -1,0 +1,68 @@
+---
+layout: team
+title: Team A
+team: TeamA
+---
+
+{% assign team_members = site.data.teams[page.team].roles.squad.members %}
+
+<h2>Stats</h2>
+
+<div class="row">
+    <div class="col md-6">
+        <h3>Appearances</h3>
+        {% assign players_by_appearance = team_members | sort: "stats.played" | reverse %}
+        <table class="table">
+            <tbody>
+                {% for i in (0..2) %}
+                    {% assign player = players_by_appearance[i] %}
+                    <tr>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.stats.played }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col md-6">
+        <h3>Top Scorers</h3>
+        {% assign players_by_goals = team_members | sort: "stats.goals" | reverse %}
+        <table class="table">
+            <tbody>
+                {% for i in (0..2) %}
+                    {% assign player = players_by_goals[i] %}
+                    <tr>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.stats.goals }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col md-12">
+        <h3>Table</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Player</th>
+                    {% for stat in site.data.teams.StatReference %}
+                        <th scope="col">{{ stat.title }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in team_members %}
+                    <tr>
+                        <th scope="row">{{ player.name }}</th>
+                        {% for stat in site.data.teams.StatReference %}
+                            <td>{{ player.stats[stat.reference] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

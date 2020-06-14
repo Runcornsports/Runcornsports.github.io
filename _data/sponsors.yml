@@ -1,32 +1,63 @@
-- name: Dave Massey Garden Maintenance
+- id: DaveMassey
+  name: Dave Massey Garden Maintenance
   image: daveMassey.jpg
-- name: Dave & Paul, Windows and Conservatories
+
+- id: DavePaul
+  name: Dave & Paul, Windows and Conservatories
   image: DavePaul.jpg
-- name: ABC Taxis
+
+- id: ABC
+  name: ABC Taxis
   image: abc.jpg
-- name: Tocco Beauty Clinic
+
+- id: Tocco
+  name: Tocco Beauty Clinic
   image: tocco.jpg
-- name: Hiz Roomz
+
+- id: Hiz
+  name: Hiz Roomz
   image: hizRoomz.jpg
-- name: Hiltons of Northwich
+
+- id: HiltonsNorthwich
+  name: Hiltons of Northwich
   image: hiltons.jpg
-- name: Molyneux Brickwork LTD
+
+- id: Molyneux
+  name: Molyneux Brickwork LTD
   image: molyneux.jpg
-- name: FPI Installations
+
+- id: FPI
+  name: FPI Installations
   image: fpi.jpg
-- name: Total Gardens
+
+- id: TotalGardens
+  name: Total Gardens
   image: totalGardens.jpg
-- name: Moet Designs
+
+- id: MoetDesigns
+  name: Moet Designs
   image: moet.jpg
-- name: Archery, kitchens and renovations
+
+- id: Archery
+  name: Archery, kitchens and renovations
   image: archery.jpg
-- name: The Cheshire View
+
+- id: CheshireView
+  name: The Cheshire View
   image: CheshireView.jpg
-- name: Live your life, drop the knife
+
+- id: DropTheKnife
+  name: Live your life, drop the knife
   image: dropTheKnife.jpg
-- name: PS Brickwork and Construction
+
+- id: PSBricks
+  name: PS Brickwork and Construction
   image: PSBrick.jpg
-- name: Halton Plaster and Rendering
+
+- id: HaltonPlaster
+  name: Halton Plaster and Rendering
   image: HaltonPlaster.jpg
-- name: Vecchio Sports
+  
+- id: Vecchio
+  name: Vecchio Sports
   image: Vecchio.jpg

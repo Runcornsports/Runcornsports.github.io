@@ -1,0 +1,27 @@
+---
+layout: team
+title: Team A
+team: TeamA
+---
+
+{% assign team = site.data.teams[page.team] %}
+<div class="row">
+    <div class="col-md-12">
+        <img src="{{ team.photo }}" class="img-fluid rounded" alt="team photo"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>{{ team.name }}</h2>
+        <hr>
+        <p>{{ team.about }}</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Sponsors</h2>
+        <hr>
+        {% for team_sponsor in team.sponsors %}
+            {{ team_sponsor.title }}:
+            {% include sponsor.html sponsor=team_sponsor.sponsor %}<br>
+        {% endfor %}
+    </div>
+</div>

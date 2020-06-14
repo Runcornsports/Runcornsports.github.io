@@ -1,0 +1,6 @@
+{% assign sponsor_id = include.sponsor %}
+
+{% assign sponsor = site.data.sponsors | find: "id", sponsor_id %}
+<div class="card">
+    <img class="card-img" src="/assets/images/sponsors/{{ sponsor.image }}" class="img-fluid" alt="{{ sponsor.name }}">
+</div>

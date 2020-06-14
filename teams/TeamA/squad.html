@@ -4,8 +4,6 @@ title: Team A
 team: TeamA
 ---
 
-{% assign team = site.data.teams[page.team] %}
-
 <style>
 .avatar {
     vertical-align: middle;
@@ -67,7 +65,8 @@ team: TeamA
 {% endfor %}
 
 <!-- Card for each player -->
-<h2 class="text-center">Squad</h2>
+<h2>Squad</h2>
+<p> Click on each player to view their profile </p>
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
         {% for player in squad.members %}
@@ -82,30 +81,3 @@ team: TeamA
         {% endfor %}
     </div>
 </div>
-
-
-
-
-<h2>Stats</h2>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Player</th>
-            {% for stat in site.data.teams.StatReference %}
-                <th scope="col">{{ stat.title }}</th>
-            {% endfor %}
-        </tr>
-    </thead>
-    <tbody>
-        {% for player in site.data.teams[page.team].roles.squad.members %}
-            <tr>
-                <th scope="row">{{ player.name }}</th>
-                {% for stat in site.data.teams.StatReference %}
-                    <td>{{ player.stats[stat.reference] }}</td>
-                {% endfor %}
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
-

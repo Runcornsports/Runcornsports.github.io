@@ -1,0 +1,8 @@
+- name: Squad
+  link: ./squad.html
+- name: Fixtures
+  link: ./fixtures.html
+- name: Results
+  link: ./results.html
+- name: Stats
+  link: ./stats.html
