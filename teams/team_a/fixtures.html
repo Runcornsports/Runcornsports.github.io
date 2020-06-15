@@ -3,3 +3,42 @@ layout: team
 title: Team A
 team: TeamA
 ---
+
+
+
+{% assign matches = site.data.teams[page.team].matches | sort: "date" %}
+
+
+{% for match in matches %}
+    {% comment %} Ensure seperate tables for seperate years {% endcomment %}
+    {% capture year %}{{ match.date | date: "%Y" }}{% endcapture %}
+    {% if year != prev_year %}
+        {% if prev_year %}
+            </tbody>
+            </table>
+        {% endif %}
+        <h2 class="fixture_year">{{ year }}</h2>
+        <table class="table" style="width:100%;">
+        <tbody>
+    {% endif %}
+    {% assign prev_year = year %}
+
+    {% comment %} New table header for each date {% endcomment %}
+    {% capture date %}{{ match.date | date: "%a %-d %b"}}{% endcapture %}
+    {% if date != prev_date %}
+        <thead>
+            <tr>
+                <th colspan="3" style="text-align: center;">{{ date }}</th>
+            </tr>
+        </thead>
+    {% endif %}
+
+    {% comment %} Standard row {% endcomment %}
+    <tr>
+    <td style="width:50%; text-align:right;">{{match.home}}</td>
+    <td><span class="badge badge-secondary">{{ match.date | date: "%H:%M"}}</span></td>
+    <td style="width:50%">{{match.away}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>

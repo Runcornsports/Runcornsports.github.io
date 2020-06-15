@@ -15,14 +15,14 @@ TeamA:
     eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae 
     consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
   sponsors:
-    - title: Home Kit
-      sponsor: Hiz
-    - title: Away Kit
-      sponsor: Molyneux
-    - title: Match Ball
-      sponsor: Tocco
-    - title: Training Wear
-      sponsor: Archery
+  - title: Home Kit
+    sponsor: Archery
+  - title: Away Kit
+    sponsor: Molyneux
+  - title: Match Ball
+    sponsor: Tocco
+  - title: Training Wear
+    sponsor: Hiz
   roles:
     management:
       name: Management
@@ -79,7 +79,21 @@ TeamA:
           manOfMatch: 0
           yellow: 1
           red: 1
+  matches:
+    - date: 20-06-23 14:00
+      home: Team A
+      away: Someone else
+    - date: 20-07-04 12:00
+      home: Team A
+      away: Team B
+    - date: 20-06-25 11:00
+      home: Another Team
+      away: Team A
+    - date: 21-06-25 15:00
+      home: Dave
+      away: Bob
 
+                
 
 # This will be looped over for building stats tables and 
 # getting the stats of individual players. 
