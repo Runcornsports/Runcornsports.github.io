@@ -17,8 +17,8 @@ team: FirstTeam
             </tbody>
             </table>
         {% endif %}
-        <h2 class="fixture_year">{{ year }}</h2>
-        <table class="table" style="width:100%;">
+        <h1 class="fixture_year" style="text-align: center; padding-top: 1em;">{{ year }}</h1>
+        <table class="table-borderless h5" style="width:100%;">
         <tbody>
     {% endif %}
     {% assign prev_year = year %}
@@ -28,7 +28,7 @@ team: FirstTeam
     {% if date != prev_date %}
         <thead>
             <tr>
-                <th colspan="3" style="text-align: center;">{{ date }}</th>
+                <th colspan="3" style="text-align: center; padding-top:1em;">{{ date }}</th>
             </tr>
         </thead>
     {% endif %}
