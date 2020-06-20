@@ -49,36 +49,50 @@ FirstTeam:
           - Winnington Avenue
           - Helsby
         stats:
-          played: 6
+          played: 0
           goals: 0
-          assists: 2
-          manOfMatch: 1
-          yellow: 2
-          red: 6
-        sponsor:
-          name: Something
-          image: /assets/images/sponsors/archery.jpg
+          assists: 0
+          manOfMatch: 0
+          yellow: 0
+          red: 0
+        sponsor: Archery
       - name: Daniel Bellfield
         position: Goalkeeper
         avatar: /assets/images/players/avatars/Danny.jpg
-        description: >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur.
+        description:
         previousClubs:
           - Runcorn Albion
           - Winnington Avenue
           - Helsby
+          - Halton Sports 
+          - Halfway FC
+        sponsor: CDL
         stats:
-          played: 3
+          played: 0
           goals: 0
           assists: 0
           manOfMatch: 0
-          yellow: 1
-          red: 1
+          yellow: 0
+          red: 0
+      - name: Jack White
+        position: Forward
+        avatar: /assets/images/players/avatars/JackWhite.jpg
+        description:
+        sponsor: Trident
+        previousClubs:
+          - Heath Rangers
+          - Barnton
+          - Widnes
+          - Helsby
+          - Halfway Athletic
+          - Roundhouse
+        stats:
+          played: 0
+          goals: 0
+          assists: 0
+          manOfMatch: 0
+          yellow: 0
+          red: 0
   matches:
     - date: 20-06-23 14:00
       home: Team A

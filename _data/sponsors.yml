@@ -42,6 +42,9 @@
   name: Archery, kitchens and renovations
   image: archery.jpg
 
+- id: Trident
+  name: Trident Fish Bar
+
 - id: CheshireView
   name: The Cheshire View
   image: CheshireView.jpg
@@ -61,3 +64,8 @@
 - id: Vecchio
   name: Vecchio Sports
   image: Vecchio.jpg
+
+- id: CDL
+  name: Computer Disposals Ltd
+  image: CDL.jpg
+  website: https://www.computerdisposals.co.uk
