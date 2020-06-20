@@ -37,18 +37,9 @@ team: FirstTeam
                         <div class="card">
                             <img class="card-img" src="{{ player.avatar }}">
                         </div>
-                        {% assign sponsor = site.data.sponsors | find: "id", player.sponsor %}
-                        {% if sponsor %}
+                        {% if player.sponsor %}
                         <span>Proudly sponsored by:</span>
-                        <div class="card">
-                            <a href="{{sponsor.website}}">
-                                {% if sponsor.image %}
-                                    <img class="card-img" src="/assets/images/sponsors/{{ sponsor.image }}">
-                                {% else %}
-                                    {{sponsor.name}}
-                                {% endif %}
-                            </a>
-                        </div>
+                        {% include sponsor.html sponsor=player.sponsor %}
                         {% endif %}
                     </div>
                     <div class="col-md-8">
