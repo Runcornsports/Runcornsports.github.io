@@ -3,13 +3,52 @@ layout: team
 title: Team A
 team: FirstTeam
 ---
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 {% assign team_members = site.data.teams[page.team].roles.squad.members %}
 
-<h2>Stats</h2>
-
 <div class="row">
-    <div class="col md-6">
+    <div class="col-md-6">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">Games</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Wins</th>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th scope="row">Losses</th>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Draws</th>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <canvas id="team_stats"></canvas>
+        <script type="text/javascript">
+            var ctx = document.getElementById('team_stats').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        backgroundColor: ['#aadd77','#ff6961','grey'],
+                        data: [5,4,1]
+                    }],
+                    labels: ['wins', 'losses', 'draws']
+                }
+            });
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
         <h3>Appearances</h3>
         {% assign players_by_appearance = team_members | sort: "stats.played" | reverse %}
         <table class="table">
@@ -24,8 +63,8 @@ team: FirstTeam
             </tbody>
         </table>
     </div>
-    <div class="col md-6">
-        <h3>Top Scorers</h3>
+    <div class="col-md-4">
+        <h3>Goals</h3>
         {% assign players_by_goals = team_members | sort: "stats.goals" | reverse %}
         <table class="table">
             <tbody>
@@ -39,10 +78,25 @@ team: FirstTeam
             </tbody>
         </table>
     </div>
+    <div class="col-md-4">
+        <h3>Assists</h3>
+        {% assign players_by_assists = team_members | sort: "stats.assists" | reverse %}
+        <table class="table">
+            <tbody>
+                {% for i in (0..2) %}
+                    {% assign player = players_by_assists[i] %}
+                    <tr>
+                        <td>{{ player.name }}</td>
+                        <td>{{ player.stats.assists }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="row">
-    <div class="col md-12">
+    <div class="col-md-12">
         <h3>Table</h3>
         <table class="table">
             <thead>
