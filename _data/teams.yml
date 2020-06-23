@@ -55,7 +55,7 @@ FirstTeam:
           manOfMatch: 0
           yellow: 0
           red: 0
-        sponsor: Archery
+        sponsor:
       - name: Daniel Bellfield
         position: Goalkeeper
         avatar: /assets/images/players/avatars/Danny.jpg
@@ -67,6 +67,24 @@ FirstTeam:
           - Halton Sports 
           - Halfway FC
         sponsor: CDL
+        stats:
+          played: 0
+          goals: 0
+          assists: 0
+          manOfMatch: 0
+          yellow: 0
+          red: 0
+      - name: Dominic Bazley
+        position: Midfield
+        avatar: /assets/images/players/avatars/DominicBazley.jpg
+        description:
+        previousClubs:
+        - Helsby Football Club
+        - Barnton Football Club
+        - Heath Rangers JFC
+        - Halfway Football Club
+        - Roundhouse FC
+        sponsor: Vecchio
         stats:
           played: 0
           goals: 0
@@ -86,6 +104,38 @@ FirstTeam:
           - Helsby
           - Halfway Athletic
           - Roundhouse
+        stats:
+          played: 0
+          goals: 0
+          assists: 0
+          manOfMatch: 0
+          yellow: 0
+          red: 0
+      - name: James Pye
+        position: Defender
+        avatar: /assets/images/players/avatars/JamesPye.jpg
+        description:
+        sponsor: Tocco
+        previousClubs:
+          - Winnington Avenue
+          - Helsby Football Club
+          - Halfway Football Club
+        stats:
+          played: 0
+          goals: 0
+          assists: 0
+          manOfMatch: 0
+          yellow: 0
+          red: 0
+      - name: Ryan Bazley
+        position: Midfield
+        avatar: /assets/images/players/avatars/RyanBazley.jpg
+        description:
+        sponsor: Haycock
+        previousClubs:
+          - Heath Rangers
+          - Runcorn Linnets
+          - Halfway Athletic
         stats:
           played: 0
           goals: 0
