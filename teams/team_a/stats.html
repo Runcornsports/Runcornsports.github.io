@@ -98,25 +98,27 @@ team: FirstTeam
 <div class="row">
     <div class="col-md-12">
         <h3>Table</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Player</th>
-                    {% for stat in site.data.teams.StatReference %}
-                        <th scope="col">{{ stat.title }}</th>
-                    {% endfor %}
-                </tr>
-            </thead>
-            <tbody>
-                {% for player in team_members %}
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
                     <tr>
-                        <th scope="row">{{ player.name }}</th>
+                        <th scope="col">Player</th>
                         {% for stat in site.data.teams.StatReference %}
-                            <td>{{ player.stats[stat.reference] }}</td>
+                            <th scope="col">{{ stat.title }}</th>
                         {% endfor %}
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {% for player in team_members %}
+                        <tr>
+                            <th scope="row">{{ player.name }}</th>
+                            {% for stat in site.data.teams.StatReference %}
+                                <td>{{ player.stats[stat.reference] }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
