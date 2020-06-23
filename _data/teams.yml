@@ -16,13 +16,9 @@ FirstTeam:
     consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
   sponsors:
   - title: Home Kit
-    sponsor: Archery
-  - title: Away Kit
-    sponsor: Molyneux
-  - title: Match Ball
-    sponsor: Tocco
+    sponsor: PSBricks
   - title: Training Wear
-    sponsor: Hiz
+    sponsor: GiggleShack
   roles:
     management:
       name: Management
