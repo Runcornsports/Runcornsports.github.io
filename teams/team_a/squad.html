@@ -96,13 +96,14 @@ team: FirstTeam
 
         {% capture position %}{{ player.position | slugify }}{% endcapture %}
 
-        {% if position == 'management' and reached_management == false %}
-            {% assign reached_management = true %}
-            </div></div>
-            <h2>Management</h2>
-            <div class="container-fluid mt-4">
-                <div class="row justify-content-center">
-
+        {% if position == 'management' %}
+            {% if reached_management == false %}
+                {% assign reached_management = true %}
+                </div></div>
+                <h2>Management</h2>
+                <div class="container-fluid mt-4">
+                    <div class="row justify-content-center">
+            {% endif %}
         {% endif %}
 
         <div class="col-auto mb-3">            
