@@ -6,6 +6,13 @@ team: FirstTeam
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 {% assign team_members = site.data.teams[page.team].members %}
+{% assign squad = "" | split: ',' %}
+{% for member in team_members %}
+    {% assign position = member.position | slugify %}
+    {% if position != "management" %}
+        {% assign squad = squad | push : member %}
+    {% endif %}
+{% endfor %}
 
 <div class="row">
     <div class="col-md-6">
@@ -50,7 +57,7 @@ team: FirstTeam
 <div class="row">
     <div class="col-md-4">
         <h3>Appearances</h3>
-        {% assign players_by_appearance = team_members | sort: "stats.played" | reverse %}
+        {% assign players_by_appearance = squad | sort: "stats.played" | reverse %}
         <table class="table">
             <tbody>
                 {% for i in (0..2) %}
@@ -65,7 +72,7 @@ team: FirstTeam
     </div>
     <div class="col-md-4">
         <h3>Goals</h3>
-        {% assign players_by_goals = team_members | sort: "stats.goals" | reverse %}
+        {% assign players_by_goals = squad | sort: "stats.goals" | reverse %}
         <table class="table">
             <tbody>
                 {% for i in (0..2) %}
@@ -80,7 +87,7 @@ team: FirstTeam
     </div>
     <div class="col-md-4">
         <h3>Assists</h3>
-        {% assign players_by_assists = team_members | sort: "stats.assists" | reverse %}
+        {% assign players_by_assists = squad | sort: "stats.assists" | reverse %}
         <table class="table">
             <tbody>
                 {% for i in (0..2) %}
@@ -109,7 +116,7 @@ team: FirstTeam
                     </tr>
                 </thead>
                 <tbody>
-                    {% for player in team_members %}
+                    {% for player in squad %}
                         <tr>
                             <th scope="row">{{ player.name }}</th>
                             {% for stat in site.data.teams.StatReference %}
