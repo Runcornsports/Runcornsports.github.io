@@ -13,18 +13,36 @@ team: FirstTeam
 }
 
 .player-card {
-    width:70px;
+    width:110px;
+    background-color: #ad9c66;
 }
+
+.player-card.management {
+    background-color: #343a40;
+    color: white;
+}
+
+.modal-dialog > .modal-content > .modal-header,
+.modal-dialog > .modal-content > .modal-footer {
+    background-color: #ad9c66
+}
+
+.modal-dialog.management > .modal-content > .modal-header,
+.modal-dialog.management > .modal-content > .modal-footer {
+    background-color: #343a40;
+    color: white;
+}
+
 </style>
 
-{% assign squad = site.data.teams[page.team].roles.squad %}
+{% assign squad = site.data.teams[page.team].members %}
 
 <!-- Modal for each player -->
-{% for player in squad.members %}
+{% for player in squad %}
 <div class="modal" id="modal-player{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered {{ player.position | slugify }}" role="document">
         <div class="modal-content">
-        <div class="modal-header" style="background-color: {{ squad.color }}">
+        <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLongTitle">{{ player.name }} - {{ player.position }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -57,7 +75,7 @@ team: FirstTeam
                 </div>
             </div>
         </div>
-        <div class="modal-footer" style="background-color: {{ squad.color }}">
+        <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
         </div>
@@ -65,14 +83,29 @@ team: FirstTeam
 </div>
 {% endfor %}
 
+{% assign reached_management = false %}
+
 <!-- Card for each player -->
+<h1>Meet the team</h1>
+<p> Click on each team member to view their profile: </p>
+
 <h2>Squad</h2>
-<p> Click on each player to view their profile </p>
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
-        {% for player in squad.members %}
+        {% for player in squad %}
+
+        {% assign position = player.position | slugify %}
+
+        {% if position == "management" and reached_management == false %}
+            {% assign reached_management = true %}
+            </div></div>
+            <h2>Management</h2>
+            <div class="container-fluid mt-4">
+                <div class="row justify-content-center">
+        {% endif %}
+
         <div class="col-auto mb-3">            
-            <div class="card" style="width: 110px; background-color: {{ squad.color }};" data-toggle="modal" data-target="#modal-player{{ forloop.index }}">
+            <div class="card player-card {{ position }}" data-toggle="modal" data-target="#modal-player{{ forloop.index }}">
                 <div class="card-body justify-content-center">
                     <img class="avatar" src="{{ player.avatar }}">
                     <span>{{ player.name }}</span>
