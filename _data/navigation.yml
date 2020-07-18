@@ -1,3 +1,4 @@
+left:
 - name: Home
   link: /
 - name: News
@@ -12,3 +13,9 @@
       link: /teams/u18/index.html
     - name: Under 21s
       link: /teams/u21/index.html
+
+right:
+- name: Twitter
+  link: https://twitter.com/runcornsportsfc
+- name: Facebook
+  link: https://www.facebook.com/RuncornSportsFC

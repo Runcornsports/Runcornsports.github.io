@@ -9,7 +9,32 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            {% for item in site.data.navigation %}
+            {% for item in site.data.navigation.left %}
+                {% if item.subfolderitems[0]%}
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.name }}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            {% for entry in item.subfolderitems %}
+                                <a class="dropdown-item" href="{{ entry.link }}">{{ entry.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% else %}
+                    <!-- Standard button -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ item.link }}">
+                            {{ item.name }}
+                            {% if page.url == item.link %}
+                                <span class="sr-only">(current)</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {% for item in site.data.navigation.right %}
                 {% if item.subfolderitems[0]%}
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
