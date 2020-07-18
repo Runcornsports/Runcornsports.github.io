@@ -7,8 +7,8 @@
 - name: Teams
   subfolderitems:
     - name: Runcorn Sports First team
-      link: /teams/team_a/index.html
-    - name: Team B
-      link: /teams/team_a/index.html
-    - name: Team C
-      link: /teams/team_a/index.html
+      link: /teams/first/index.html
+    - name: Under 18s
+      link: /teams/u18/index.html
+    - name: Under 21s
+      link: /teams/u21/index.html

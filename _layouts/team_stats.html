@@ -1,11 +1,10 @@
 ---
 layout: team
-title: Team A
-team: FirstTeam
 ---
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-{% assign team_members = site.data.teams[page.team].members %}
+{% assign team = site.data.teams[page.team] %}
+{% assign team_members = team.members %}
 {% assign squad = "" | split: ',' %}
 {% for member in team_members %}
     {% assign position = member.position | slugify %}
@@ -20,19 +19,19 @@ team: FirstTeam
             <tbody>
                 <tr>
                     <th scope="row">Games</th>
-                    <td>10</td>
+                    <td>{{ team.stats.games }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Wins</th>
-                    <td>7</td>
+                    <td>{{ team.stats.wins }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Losses</th>
-                    <td>2</td>
+                    <td>{{ team.stats.losses }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Draws</th>
-                    <td>1</td>
+                    <td>{{ team.stats.draws }}</td>
                 </tr>
             </tbody>
         </table>
@@ -46,7 +45,11 @@ team: FirstTeam
                 data: {
                     datasets: [{
                         backgroundColor: ['#aadd77','#ff6961','grey'],
-                        data: [5,4,1]
+                        data: [
+                            {{ team.stats.wins }},
+                            {{ team.stats.losses }},
+                            {{ team.stats.draws }}
+                        ]
                     }],
                     labels: ['wins', 'losses', 'draws']
                 }

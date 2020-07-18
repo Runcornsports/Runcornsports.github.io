@@ -1,13 +1,12 @@
 ---
 layout: team
-title: Team A
-team: FirstTeam
 ---
 
 
-
-{% assign matches = site.data.teams[page.team].matches | sort: "date" %}
-
+{% assign matches = site.data.teams[page.team].matches %}
+{% if matches %}
+    {% assign matches = site.data.teams[page.team].matches | sort: "date" %}
+{% endif %}
 
 {% for match in matches %}
     {% comment %} Ensure seperate tables for seperate years {% endcomment %}
