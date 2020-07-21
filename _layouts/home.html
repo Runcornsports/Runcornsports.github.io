@@ -24,34 +24,8 @@ title: Runcorn Sports Football Club
 <div class="row">
     <div class="col-md-12">
         <hr>
-        <h2>Recent News</h2>
-        <div class="card-group">
-            {% for post in site.posts %}
-                
-                <div class="card">
-                        
-                    <img src="{{ post.image }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <a href="{{ post.url }}">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                    </a>
-                    <p class="card-text">{{ post.excerpt }}</p>
-                    <p class="card-text"><small class="text-muted">{{ post.date | date_to_string }}</small></p>
-                    </div>
-                
-                </div>
-                
-            {% endfor %}
-        </div>
-        <p style="text-align: right;">
-            <a href="/news.html">More news...</a>
-        </p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <hr>
         <h3>Proudly sponsored by:</h3>
+        <br>
         <!-- TODO: Change column width for screen size (check bootstrap) -->
         <div class="card-columns" style="column-count: 4;">
         {% for item in site.data.sponsors %}
