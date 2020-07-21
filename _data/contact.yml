@@ -1,13 +1,17 @@
 - type: phone
-  value: 0118 999 881 99 9119 725 3
+  value: 07874042670
 - type: email
-  value: someone@someplace.com
+  value: RucornSportsFC@gmail.com
 - type: twitter
-  value: Link to twitter
+  value: "@RuncornSportsFC"
+  link: https://twitter.com/RuncornSportsFC/
 - type: facebook
-  value: Link to facebook
+  value: "@RuncornSportsFC"
+  link: https://www.facebook.com/RuncornSportsFC/
 - type: address
   value: |
-    P. Sherman
-    42 Wallaby Way
-    Sydney
+    Runcorn Sports Football Club
+    c/o Runcorn Sports Club
+    Moughland Lane
+    Runcorn
+    WA7 4SD 

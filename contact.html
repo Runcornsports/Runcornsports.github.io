@@ -11,11 +11,17 @@ layout: default
         <dl class="row">
             {% for item in site.data.contact %}
             <dt class="col-sm-3">{{ item.type }}</dt>
-            <dd class="col-sm-9">{{ item.value | newline_to_br }}</dd>
+            <dd class="col-sm-9">
+                {% if item.link %}
+                    <a href="{{ item.link }}">{{item.value}}</a>
+                {% else %}
+                    {{ item.value | newline_to_br }}
+                {% endif %}            
+            </dd>
             {% endfor %}
         </dl>
     </div>
-    <div class="col-md-6">
+    <!--div class="col-md-6">
         {% include map.html %}  
-    </div>
+    </div-->
 </div>
