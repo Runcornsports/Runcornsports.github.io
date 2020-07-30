@@ -7,19 +7,7 @@ FirstTeam:
   - title: Training Wear
     sponsor: GiggleShack
   members: team_first_members
-  matches:
-    - date: 20-06-23 14:00
-      home: Team A
-      away: Someone else
-    - date: 20-07-04 12:00
-      home: Team A
-      away: Team B
-    - date: 20-06-25 11:00
-      home: Another Team
-      away: Team A
-    - date: 21-06-25 15:00
-      home: Dave
-      away: Bob
+  matches: team_first_matches
   stats:
     games: 0
     wins: 0
@@ -32,7 +20,7 @@ u21:
   photo:
   sponsors:
   members: team_u21_members
-  matches:
+  matches: team_u21_matches
   stats:
     games: 0
     wins: 0
@@ -44,7 +32,7 @@ u18:
   photo:
   sponsors:
   members: team_u18_members
-  matches:
+  matches: team_u18_matches
   stats:
     games: 0
     wins: 0

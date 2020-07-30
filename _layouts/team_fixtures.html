@@ -2,10 +2,11 @@
 layout: team
 ---
 
-
-{% assign matches = site.data.teams[page.team].matches %}
+{% assign collection = site.data.teams[page.team].matches %}
+{% assign matches = site[collection] %}
 {% if matches %}
-    {% assign matches = site.data.teams[page.team].matches | sort: "date" %}
+    {% assign matches = matches | where:"finished", false %}
+    {% assign matches = matches | sort: "date" %}
 {% endif %}
 
 {% for match in matches %}
