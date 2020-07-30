@@ -1,3 +1,12 @@
+collections:
+  - sponsors
+  - team_first_matches
+  - team_first_members
+  - team_u18_matches
+  - team_u18_members
+  - team_u21_matches
+  - team_u21_members
+
 plugins:
   - jekyll-paginate
 

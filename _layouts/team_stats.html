@@ -4,7 +4,8 @@ layout: team
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 {% assign team = site.data.teams[page.team] %}
-{% assign team_members = team.members %}
+{% assign collection = team.members %}
+{% assign team_members = site[collection] %}
 {% assign squad = "" | split: ',' %}
 {% for member in team_members %}
     {% assign position = member.position | slugify %}

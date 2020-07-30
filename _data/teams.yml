@@ -6,125 +6,7 @@ FirstTeam:
     sponsor: PSBricks
   - title: Training Wear
     sponsor: GiggleShack
-  members:
-  # Squad
-  - name: Chris Hough
-    position: Centre back
-    avatar: /assets/images/players/avatars/Chris.jpg
-    description: >
-      Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-      nulla pariatur.
-    previousClubs: 
-      - Runcorn Linnets
-      - Runcorn Town
-      - Winnington Avenue
-      - Helsby
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-    sponsor:
-  - name: Daniel Bellfield
-    position: Goalkeeper
-    avatar: /assets/images/players/avatars/Danny.jpg
-    description:
-    previousClubs:
-      - Runcorn Albion
-      - Winnington Avenue
-      - Helsby
-      - Halton Sports 
-      - Halfway FC
-    sponsor: CDL
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-  - name: Dominic Bazley
-    position: Midfield
-    avatar: /assets/images/players/avatars/DominicBazley.jpg
-    description:
-    previousClubs:
-    - Helsby Football Club
-    - Barnton Football Club
-    - Heath Rangers JFC
-    - Halfway Football Club
-    - Roundhouse FC
-    sponsor: Vecchio
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-  - name: Jack White
-    position: Forward
-    avatar: /assets/images/players/avatars/JackWhite.jpg
-    description:
-    sponsor: Trident
-    previousClubs:
-      - Heath Rangers
-      - Barnton
-      - Widnes
-      - Helsby
-      - Halfway Athletic
-      - Roundhouse
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-  - name: James Pye
-    position: Defender
-    avatar: /assets/images/players/avatars/JamesPye.jpg
-    description:
-    sponsor: Tocco
-    previousClubs:
-      - Winnington Avenue
-      - Helsby Football Club
-      - Halfway Football Club
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-  - name: Ryan Bazley
-    position: Midfield
-    avatar: /assets/images/players/avatars/RyanBazley.jpg
-    description:
-    sponsor: Haycock
-    previousClubs:
-      - Heath Rangers
-      - Runcorn Linnets
-      - Halfway Athletic
-    stats:
-      played: 0
-      goals: 0
-      assists: 0
-      manOfMatch: 0
-      yellow: 0
-      red: 0
-  # Management
-  - name: Peter Bellfield
-    position: Management
-    color: black
-    avatar: /assets/images/players/avatars/Peter.jpg
-    previousClubs:
-      - Winnington Avenue
-      - Helsby Reserves
-      - Halfway Athletic
-      - Beechwood
+  members: team_first_members
   matches:
     - date: 20-06-23 14:00
       home: Team A
@@ -149,7 +31,7 @@ u21:
   name: Runcorn Sports Under 21s
   photo:
   sponsors:
-  members:
+  members: team_u21_members
   matches:
   stats:
     games: 0
@@ -161,7 +43,7 @@ u18:
   name: Beechwood JFC Under 18s
   photo:
   sponsors:
-  members:
+  members: team_u18_members
   matches:
   stats:
     games: 0

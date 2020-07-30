@@ -33,7 +33,20 @@ layout: team
 
 </style>
 
-{% assign squad = site.data.teams[page.team].members %}
+{% assign collection = site.data.teams[page.team].members %}
+{% assign members = site[collection] %}
+
+{% assign squad = "" | split: ',' %}
+{% assign management = "" | split: ',' %}
+
+{% for member in members %}
+    {% assign position = member.position | slugify %}
+    {% if position == "management" %}
+        {% assign management = management | push : member %}
+    {% else %}
+        {% assign squad = squad | push : member %}
+    {% endif %}
+{% endfor %}
 
 <!-- Modal for each player -->
 {% for player in squad %}
@@ -59,7 +72,7 @@ layout: team
                         {% endif %}
                     </div>
                     <div class="col-md-8">
-                        <P>{{ player.description }}</P>
+                        <P>{{ player.content }}</P>
                         <p><b>Previous clubs:</b>
                         {{ player.previousClubs | join: ", " }}
                         </p>
@@ -81,7 +94,6 @@ layout: team
 </div>
 {% endfor %}
 
-{% assign reached_management = false %}
 
 <!-- Card for each player -->
 <h1>Meet the team</h1>
@@ -91,22 +103,27 @@ layout: team
 <div class="container-fluid mt-4">
     <div class="row justify-content-center">
         {% for player in squad %}
-
-        {% assign position = player.position | slugify %}
-
-        {% if position == 'management' and reached_management == false %}
-            {% assign reached_management = true %}
-            </div></div>
-            <h2>Management</h2>
-            <div class="container-fluid mt-4">
-                <div class="row justify-content-center">
-        {% endif %}
-
         <div class="col-auto mb-3">            
-            <div class="card player-card {{ position }}" data-toggle="modal" data-target="#modal-player{{ forloop.index }}">
+            <div class="card player-card {{ position }}" data-toggle="modal" data-target='#modal-player{{ forloop.index }}'>
                 <div class="card-body justify-content-center">
                     <img class="avatar" src="{{ player.avatar }}">
                     <span>{{ player.name }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<h2>Management</h2>
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        {% for member in management %}
+        <div class="col-auto mb-3">            
+            <div class="card player-card {{ position }}" data-toggle="modal" data-target="#modal-manager{{ forloop.index }}">
+                <div class="card-body justify-content-center">
+                    <img class="avatar" src="{{ member.avatar }}">
+                    <span>{{ member.name }}</span>
                 </div>
             </div>
         </div>
